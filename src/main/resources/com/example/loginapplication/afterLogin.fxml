@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1200.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginapplication.afterLogin">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableView" layoutX="238.0" layoutY="91.0" prefHeight="379.0" prefWidth="916.0" AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="238.0" AnchorPane.topAnchor="91.0" />
+            <TextField fx:id="minIntField" layoutX="1016.0" layoutY="624.0" prefHeight="25.0" prefWidth="60.0" promptText="Min Int." />
+            <Button fx:id="buttonInnerJoin1" layoutX="26.0" layoutY="638.0" mnemonicParsing="false" onAction="#myInnerJoin1" text="Inner Join Customer / Sales" />
+            <TextField fx:id="maxIntField" layoutX="1112.0" layoutY="624.0" prefHeight="25.0" prefWidth="60.0" promptText="Max Int." />
+            <Label fx:id="warningLabel" layoutX="578.0" layoutY="474.0" prefHeight="20.0" prefWidth="339.0" textFill="#ff4343">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="312.0" layoutY="505.0" text="Customers" AnchorPane.leftAnchor="238.0" AnchorPane.topAnchor="505.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="604.0" layoutY="497.0" text="Cars" AnchorPane.bottomAnchor="325.0" AnchorPane.leftAnchor="538.0" AnchorPane.topAnchor="505.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="898.0" layoutY="489.0" text="Sales" AnchorPane.leftAnchor="838.0" AnchorPane.topAnchor="505.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <VBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="104.0" prefHeight="400.0" prefWidth="213.0" style="-fx-background-color: #383E4C;" AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="987.0" AnchorPane.topAnchor="67.0">
+               <children>
+                  <Button fx:id="customersButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#loadCustomers" prefHeight="75.0" prefWidth="237.0" style="-fx-background-color: #383E4C;" text="   Customers" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@customer.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="carsButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#loadCars" prefHeight="75.0" prefWidth="237.0" style="-fx-background-color: #383E4C;" text="   Cars" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@car.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="salesButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#loadSales" prefHeight="75.0" prefWidth="237.0" style="-fx-background-color: #383E4C;" text="   Sales" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sale.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox layoutX="85.0" layoutY="6.0" prefHeight="67.0" prefWidth="1200.0" style="-fx-background-color: #FF6E09;" AnchorPane.bottomAnchor="783.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="goBackButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#goBack" prefHeight="75.0" prefWidth="142.0" text="Log Out">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="56.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@goback.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children></VBox>
+            <VBox layoutX="312.0" layoutY="547.0" prefHeight="200.0" prefWidth="170.0" AnchorPane.leftAnchor="238.0" AnchorPane.topAnchor="550.0">
+               <children>
+                  <TextField fx:id="cusCustomerIdField" prefHeight="35.0" prefWidth="95.0" promptText="Customer ID" />
+                  <TextField fx:id="firstNameField" prefHeight="35.0" prefWidth="140.0" promptText="First Name" />
+                  <TextField fx:id="lastNameField" prefHeight="35.0" prefWidth="140.0" promptText="Last Name" />
+                  <TextField fx:id="addressField" prefHeight="35.0" prefWidth="170.0" promptText="Address" />
+               </children>
+            </VBox>
+            <VBox layoutX="667.0" layoutY="547.0" prefHeight="200.0" prefWidth="170.0" AnchorPane.bottomAnchor="103.0" AnchorPane.leftAnchor="538.0" AnchorPane.topAnchor="550.0">
+               <children>
+                  <TextField fx:id="vinField" prefHeight="35.0" prefWidth="170.0" promptText="VIN" />
+                  <TextField fx:id="makeField" prefHeight="35.0" prefWidth="120.0" promptText="Make" />
+                  <TextField fx:id="modelField" prefHeight="35.0" prefWidth="172.0" promptText="Model" />
+                  <TextField fx:id="yearField" prefHeight="35.0" prefWidth="95.0" promptText="Year" />
+                  <TextField fx:id="milesField" prefHeight="35.0" prefWidth="95.0" promptText="Miles" />
+               </children>
+            </VBox>
+            <VBox layoutX="924.0" layoutY="522.0" prefHeight="200.0" prefWidth="170.0" AnchorPane.leftAnchor="838.0" AnchorPane.topAnchor="550.0">
+               <children>
+                  <TextField fx:id="salesIdField" prefHeight="35.0" prefWidth="95.0" promptText="Sales ID" />
+                  <TextField fx:id="priceField" prefHeight="35.0" prefWidth="95.0" promptText="Price" />
+                  <TextField fx:id="intrateField" prefHeight="35.0" prefWidth="95.0" promptText="Interest Rate" />
+                  <TextField fx:id="salesVinField" prefHeight="35.0" prefWidth="170.0" promptText="VIN" />
+                  <TextField fx:id="salesCustomerField" prefHeight="35.0" prefWidth="95.0" promptText="Customer ID" />
+               </children>
+            </VBox>
+            <HBox layoutX="85.0" layoutY="713.0" prefHeight="35.0" prefWidth="175.0" AnchorPane.leftAnchor="238.0" AnchorPane.topAnchor="750.0">
+               <children>
+                  <Button fx:id="customerSearchButton" mnemonicParsing="false" onAction="#checkCustomerFields" prefHeight="45.0" prefWidth="150.0" text="Search" />
+                  <Button fx:id="customerInsertButton" mnemonicParsing="false" onAction="#insertCustomersData" prefHeight="45.0" prefWidth="150.0" text="Insert" />
+               </children>
+            </HBox>
+            <HBox layoutX="316.0" layoutY="730.0" prefHeight="35.0" prefWidth="175.0" AnchorPane.leftAnchor="538.0" AnchorPane.topAnchor="750.0">
+               <children>
+                  <Button fx:id="carSearchButton" mnemonicParsing="false" onAction="#checkCarFields" prefHeight="45.0" prefWidth="150.0" text="Search" />
+                  <Button fx:id="carInsertButton" mnemonicParsing="false" onAction="#insertCarsData" prefHeight="45.0" prefWidth="150.0" text="Insert" />
+               </children>
+            </HBox>
+            <HBox layoutX="853.0" layoutY="743.0" prefHeight="35.0" prefWidth="175.0" AnchorPane.leftAnchor="838.0">
+               <children>
+                  <Button fx:id="saleSearchButton" mnemonicParsing="false" onAction="#checkSaleFields" prefHeight="45.0" prefWidth="150.0" text="Search" />
+                  <Button fx:id="saleInsertButton" mnemonicParsing="false" onAction="#insertSalesData" prefHeight="45.0" prefWidth="150.0" text="Insert" />
+               </children>
+            </HBox>
+            <Label layoutX="1066.0" layoutY="596.0" text="between">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="insertSuccessLabel" layoutX="406.0" layoutY="474.0" prefHeight="20.0" prefWidth="539.0" textFill="#0fc62a">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="43.0" fitWidth="453.0" layoutX="10.0" layoutY="10.0" AnchorPane.rightAnchor="390.0">
+               <image>
+                  <Image url="@../../../../../../../../Downloads/racewayauto.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="26.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Find customer's names and the sale price / interest" wrappingWidth="173.6640625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+   </center>
+</BorderPane>
