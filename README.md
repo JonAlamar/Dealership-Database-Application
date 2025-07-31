@@ -206,20 +206,6 @@ Dealership-Database-Application/
 - **Session Management**: Secure session handling throughout the application
 - **Database Security**: SQLite database with proper access controls
 
-## 🚧 Development & Maintenance
-
-### Code Organization
-- **MVC Architecture**: Clear separation of concerns
-- **FXML Integration**: Declarative UI design with code separation
-- **Object-Oriented Design**: Well-structured class hierarchy
-- **Database Abstraction**: Clean database access layer
-
-### Extending the System
-The application is designed for easy extension:
-- Add new entity types by creating model classes
-- Extend UI by adding new FXML files and controllers
-- Implement additional reports through new database queries
-- Add business logic through service layer classes
 
 ## 📝 License
 
